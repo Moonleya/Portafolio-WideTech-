@@ -1,0 +1,80 @@
+@use "variables" as v;
+main {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.titulocontactanos {
+  color: #C4D600;
+  font-family:v.$fuente;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form {
+  max-width: 600px;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+   label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+ textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  input[type="button"] {
+    background: #13353B;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #0f2a2f;
+    }
+  }
+
+
+@include v.mobile {
+  main {
+    padding: 10px;
+  }
+
+  .titulocontactanos {
+    font-size: 1.8rem;
+  }
+
+  .form {
+    padding: 1rem;
+    gap: 10px;
+  }
+}
+}

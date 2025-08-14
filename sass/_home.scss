@@ -1,0 +1,51 @@
+@use "variables" as v;
+main{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: v.$fondomain;
+
+
+section{
+  margin-bottom: 20px;
+}
+
+  article{
+  margin-bottom: 20px;
+  }
+}
+
+.inline{
+  display: block;
+  text-align: justify;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.carousel {
+  margin-bottom: 30px;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: contain;
+}
+
+.imgplataforma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

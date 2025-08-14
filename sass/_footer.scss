@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.facebook{
+    width: 50px ;
+    height: 50px ;
+}
+
+.instagram{
+    width: 50px;
+    height: 50px;
+}
+
+.linkelind{
+    width: 50px;
+    height: 50px;
+}
+
+.youtube{
+    width: 50px;
+    height: 50px;
+}
+
+.Whastapp{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+}
+
+ @include v.mobile{
+    footer{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+   footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+    footer nav a img {
+    display: block;
+    margin: 0 auto;
+  }
+ 
+}
+    

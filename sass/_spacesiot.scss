@@ -1,0 +1,93 @@
+@use "variables" as v;
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+.titulospaces {
+  color: #C4D600;
+  font-family:v.$fuente;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+  margin: 30px 0 20px;
+}
+
+.imgspacesiot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.imgcamera,
+.imgcan {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@include v.mobile {
+  main {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .titulospaces {
+    font-size: 1.8rem;
+    padding-left: 10px;
+    margin: 20px 0 15px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .inline-block {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .imgspacesiot {
+    padding: 10px;
+  }
+
+  footer {
+    gap: 15px;
+  }
+}

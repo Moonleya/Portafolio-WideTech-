@@ -279,7 +279,8 @@ main article {
 
 .carousel-item img {
   height: 500px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .imgplataforma {
@@ -534,6 +535,4 @@ main {
   footer {
     gap: 15px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=style.css.map */

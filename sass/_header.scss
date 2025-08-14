@@ -1,0 +1,123 @@
+@use "variables" as v;
+
+header{
+   /* position: sticky;
+    top: 0px;*/ /* Para que se quede arriba y se mueve por mi scroll, pero no quiero eso */
+    padding: 10px;
+    background-color: v.$fondoHeader;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    }
+
+
+.imglogo{
+    height: 150px;
+    width: 250px;
+    align-items: center;
+    animation: aparecer 1.5s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tituloindex {
+  font-family: v.$fuente;
+  color:v.$colorPrincipal;
+}
+
+.titulospaces {
+  color:v.$color-titulospaces;
+  font-family: v.$fuente;
+}
+
+.titulosoluciones {
+  color: v.$color-titulosoluciones;
+  font-family: v.$fuente;
+}
+
+.tituloportafolio {
+  color :v.$color-tituloportafolio;
+  font-family: v.$fuente;
+}
+
+.titulocontactanos {
+  color: v.$color-titulocontactanos;
+  font-family: v.$fuente;
+}
+
+  nav {
+    ul.navegacion {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+      padding: 0px;
+
+      li.navegacion__item {
+        display: flex;
+        gap: 15px;
+
+        a {
+          display: inline-block;
+          color: #2E3434;
+          border: 1px solid v.$colorPrincipal;
+          border-radius: 5px;
+          padding: 8px 12px;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+
+          &:hover {
+            background-color: v.$colorPrincipal;
+            color: white;
+          }
+
+          &.navegacion__item--selected {
+            background-color:v.$colorPrincipal;
+            color: white;
+          }
+        }
+      }
+    }
+ 
+
+   @include v.mobile {
+     header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+      nav {
+          width: 100%;
+        }  
+
+    nav ul.navegacion {
+    display:flex;
+    flex-wrap:wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    }
+
+  nav li {
+    flex: 0 0 auto; /* Mantiene el tamaño del botón */
+    text-align: center;
+  }
+  nav a {
+    font-size: 14px; /* Texto más pequeño para que quepa más contenido */
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+}
+}

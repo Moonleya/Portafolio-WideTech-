@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$fuente:"Raleway";
+$colorPrincipal: #13353B;
+$fondoHeader: aliceblue;
+$fondomain:aliceblue;
+$color-link: #2E3434;
+$color-link-border: #13353B;
+$color-titulo: #13353B;
+$color-titulospaces: #C4D600;
+$color-titulosoluciones: #696B6D;
+$color-tituloportafolio: #466969;
+$color-titulocontactanos: #C4D600;
+$border-radius: 5px;
+$color-footer-bg: whitesmoke;
+$icon-size: 50px;
+
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+    font-family:$fuente;
+}
+
+body{
+    background-color:aliceblue;
+}
+
+@mixin mobile{
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+%flr{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items:center;
+}
+
+%flc{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items:center;
+}
