@@ -1,26 +1,26 @@
 @use "variables" as v;
-main{
+
+main {
   display: flex;
   flex-direction: column;
   padding: 15px;
   background-color: v.$fondomain;
 
+  section {
+    margin-bottom: 20px;
+  }
 
-section{
-  margin-bottom: 20px;
-}
-
-  article{
-  margin-bottom: 20px;
+  article {
+    margin-bottom: 20px;
   }
 }
 
-.inline{
+.inline {
   display: block;
   text-align: justify;
 }
 
-.contenedor{
+.contenedor {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -47,5 +47,41 @@ section{
     max-width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+// 📱 Versión móvil
+@include v.mobile {
+  main {
+    padding: 10px;
+
+    section {
+      margin-bottom: 15px;
+    }
+
+    article {
+      margin-bottom: 15px;
+    }
+  }
+
+  .contenedor {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .carousel-item img {
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  .imgplataforma {
+    padding: 5px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

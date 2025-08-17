@@ -1,22 +1,19 @@
 @use "variables" as v;
 
-header{
-   /* position: sticky;
-    top: 0px;*/ /* Para que se quede arriba y se mueve por mi scroll, pero no quiero eso */
-    padding: 10px;
-    background-color: v.$fondoHeader;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    }
+header {
+  padding: 10px;
+  background-color: v.$fondoHeader;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-
-.imglogo{
-    height: 150px;
-    width: 250px;
-    align-items: center;
-    animation: aparecer 1.5s ease-in-out forwards;
+.imglogo {
+  height: 150px;
+  width: 250px;
+  align-items: center;
+  animation: aparecer 1.5s ease-in-out forwards;
 }
 
 @keyframes aparecer {
@@ -32,11 +29,11 @@ header{
 
 .tituloindex {
   font-family: v.$fuente;
-  color:v.$colorPrincipal;
+  color: v.$colorPrincipal;
 }
 
 .titulospaces {
-  color:v.$color-titulospaces;
+  color: v.$color-titulospaces;
   font-family: v.$fuente;
 }
 
@@ -46,7 +43,7 @@ header{
 }
 
 .tituloportafolio {
-  color :v.$color-tituloportafolio;
+  color: v.$color-tituloportafolio;
   font-family: v.$fuente;
 }
 
@@ -55,69 +52,76 @@ header{
   font-family: v.$fuente;
 }
 
-  nav {
-    ul.navegacion {
+nav {
+  ul.navegacion {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+
+    li.navegacion__item {
       display: flex;
-      list-style: none;
-      flex-wrap: wrap;
       gap: 15px;
-      list-style: none;
-      padding: 0px;
 
-      li.navegacion__item {
-        display: flex;
-        gap: 15px;
+      a {
+        display: inline-block;
+        color: #2E3434;
+        border: 1px solid v.$colorPrincipal;
+        border-radius: 5px;
+        padding: 8px 12px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
 
-        a {
-          display: inline-block;
-          color: #2E3434;
-          border: 1px solid v.$colorPrincipal;
-          border-radius: 5px;
-          padding: 8px 12px;
-          text-decoration: none;
-          transition: background-color 0.3s, color 0.3s;
+        &:hover {
+          background-color: v.$colorPrincipal;
+          color: white;
+        }
 
-          &:hover {
-            background-color: v.$colorPrincipal;
-            color: white;
-          }
-
-          &.navegacion__item--selected {
-            background-color:v.$colorPrincipal;
-            color: white;
-          }
+        &.navegacion__item--selected {
+          background-color: v.$colorPrincipal;
+          color: white;
         }
       }
     }
- 
+  }
+}
 
-   @include v.mobile {
-     header {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
+// 📱 Versión móvil
+@include v.mobile {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
 
-      nav {
-          width: 100%;
-        }  
+  nav {
+    width: 100%;
+  }
 
-    nav ul.navegacion {
-    display:flex;
-    flex-wrap:wrap;
+  nav ul.navegacion {
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     padding: 0;
     margin: 0;
-    }
+    justify-content: center;
+  }
 
   nav li {
-    flex: 0 0 auto; /* Mantiene el tamaño del botón */
+    flex: 0 0 auto;
     text-align: center;
   }
+
   nav a {
-    font-size: 14px; /* Texto más pequeño para que quepa más contenido */
+    font-size: 14px;
     padding: 6px 10px;
     white-space: nowrap;
   }
+
+  .imglogo {
+    height: 100px;
+    width: auto;
+  }
 }
-}
+
