@@ -1,80 +1,95 @@
-@use "variables" as v;
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    }
+@use "variables" as v; 
 
-// Titulos
-.tituloportafolio {
-  color: #466969;
-  font-family:v.$fuente;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align:left; 
-  padding-left: 30px;
-
+// =========================
+// Layout principal
+// =========================
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // usa rem para consistencia con tipografía
+  padding: 1.5rem;
 }
 
-// Contenedor de imagen de segmentos
+// =========================
+// Títulos
+// =========================
+.tituloportafolio {
+  color: v.$color-tituloportafolio !important ;
+  font-family: v.$fuente !important;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-size: clamp(2rem, 4vw, 3rem); // responsive
+  line-height: 1.2;
+}
+
+// =========================
+// Imagen de segmentos
+// =========================
 .imgsegmentos {
-  max-width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem;
 
   img {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: .5rem; // mejora visual
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
 }
 
-// Contenedor de texto + video
+// =========================
+// Contenedor video + texto
+// =========================
 .contenedor {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 40px;
-  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 1.25rem;
+
+  // Video
+  video {
+    max-width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  // Texto
+  .inline-block {
+    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    text-align: justify;
+    line-height: 1.6;
+  }
 }
 
-.inline-block {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-  text-align: justify;
-  line-height: 1.5;
-}
-
-// Videos
-video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
+// =========================
+// Responsividad
+// =========================
 @include v.mobile {
   main {
-    padding: 10px;
-    gap: 20px;
+    padding: .75rem;
+    gap: 1.25rem;
   }
 
   .contenedor {
     flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .inline-block {
-    max-width: 100%;
-    text-align: justify;
+    gap: 1.25rem;
+    padding: .75rem;
   }
 
   .imgsegmentos {
-    padding: 10px;
+    padding: .75rem;
+  }
+
+  .tituloportafolio {
+    font-size: 2rem; // más compacto en móvil
   }
 }

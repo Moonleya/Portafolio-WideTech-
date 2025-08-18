@@ -8,32 +8,45 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./assets/iconos.png" type="image/x-icon">
 </head>
-<body>
-    <!--Este es el cuerpo de mi primera pagina web Quienes somos  -->
+<body> <!--Este es el cuerpo de mi primera pagina web Quienes somos  -->
    <header>
-     <!-- Logo, titulo y Barra de navegación -->
-         <a href="../index.html">
-        <img src="./assets/widetechlogostandard.png" alt="logo de widetech" title="Logo" class="imglogo">
-        </a>
-       <h1 class="tituloindex absolute">Nosotros</h1>
-  
-        <!-- Barra de Navegación -->
-         <!-- a significa enlace -->
-    <nav>
-        <ul class="navegacion">
-                 <li class="navegacion__item">
-              <a href="./index.html" class="navegacion__item--selected" >Quienes Somos? </a>
-              <a href="./pages/portafolio.html ">Portafolio</a>
-              <a href="./pages/spacesiot.html">Spaces IoT </a>
-              <a href="./pages/software.html">Soluciones de Software</a>
-              <a href="./pages/contactanos.html">Contáctanos</a>
-            </li>
-        </ul>
-    </nav>
-   </header> 
+     <nav class="navbar navbar-expand-lg">
+    <!-- Logo -->
+    <a class="navbar-brand" href="./index.html">
+      <img src="./assets/widetechlogostandard.png" alt="Logo WideTech" class="imglogo">
+    </a>
 
-   <main>
-  
+    <!-- Título centrado -->
+    <h1 class="tituloindex "> Nosotros </h1>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Quiénes Somos?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./pages/portafolio.html">Portafolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/spacesiot.html">Spaces IoT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/software.html">Soluciones de Software</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/contactanos.html">Contáctanos</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+   </header> 
      <!-- Agregar un carrusel con Boostrap -->
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -86,28 +99,26 @@
    </main>
 
    <footer>
-        <h2 class="tituloindex">Derechos Reservados</h2>
-        <h2 class="tituloindex" >Creado por Leidy Achury  </h2>
-        <nav>
-            <a href="https://www.facebook.com/Widetech.co/?locale=es_LA" target="_blank">
-                <img src="./assets/facebook.png" alt="Enlace a facebook" title="facebook" class="facebook">
-            </a>
-             <a href="https://co.linkedin.com/company/widetechgroup" target="_blank">
-                <img src="./assets/linkelind.png" alt="Enlace a linkelind" title="linkelind" class="linkelind">
-            </a>
-             <a href="https://www.youtube.com/@widetechgroup" target="_blank">
-                <img src="./assets/youtube.png" alt="Enlace a youtube" title="youtube" class="youtube">
-            </a>
-            <a href="https://www.instagram.com/widetechgroup/?hl=es" target="_blank">
-                <img src="./assets/instagram.png" alt="Enlace a instagram" title="instagram" class="instagram">
-            </a>
-
-             <a href="https://web.whatsapp.com" target="_blank">
-                <img src="./assets/Whastapp.png" alt="Enlace a Whastapp" title="Whastapp" class="Whastapp">
-            </a>
-
-        </nav>
-   </footer>
+  <h2 class="tituloindex">Derechos Reservados</h2>
+  <h2 class="tituloindex">Creado por Leidy Achury</h2>
+  <nav>
+    <a href="https://www.facebook.com/Widetech.co/?locale=es_LA" target="_blank">
+      <img src="./assets/facebook.png" alt="Enlace a Facebook" title="Facebook" class="facebook">
+    </a>
+    <a href="https://co.linkedin.com/company/widetechgroup" target="_blank">
+      <img src="./assets/linkelind.png" alt="Enlace a LinkedIn" title="LinkedIn" class="linkelind">
+    </a>
+    <a href="https://www.youtube.com/@widetechgroup" target="_blank">
+      <img src="./assets/youtube.png" alt="Enlace a YouTube" title="YouTube" class="youtube">
+    </a>
+    <a href="https://www.instagram.com/widetechgroup/?hl=es" target="_blank">
+      <img src="./assets/instagram.png" alt="Enlace a Instagram" title="Instagram" class="instagram">
+    </a>
+    <a href="https://web.whatsapp.com" target="_blank">
+      <img src="./assets/whastapp.png" alt="Enlace a WhatsApp" title="WhatsApp" class="whatsapp">
+    </a>
+  </nav>
+</footer>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>

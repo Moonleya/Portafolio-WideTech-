@@ -1,19 +1,17 @@
 @use "variables" as v;
 
-header {
+header{
+  width: 100%;
   padding: 10px;
-  background-color: v.$fondoHeader;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color:v.$fondoHeader;
 }
 
-.imglogo {
-  height: 150px;
-  width: 250px;
-  align-items: center;
-  animation: aparecer 1.5s ease-in-out forwards;
+
+.imglogo{
+    height: 100px;
+    width: 200px;
+    align-items:flex-start;
+    animation: aparecer 1.5s ease-in-out forwards;
 }
 
 @keyframes aparecer {
@@ -28,13 +26,22 @@ header {
 }
 
 .tituloindex {
-  font-family: v.$fuente;
+  font-family: v.$fuente !important;
   color: v.$colorPrincipal;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  font-size: 3rem;
 }
 
 .titulospaces {
-  color: v.$color-titulospaces;
-  font-family: v.$fuente;
+  color: v.$color-titulospaces !important;
+  font-family: v.$fuente !important;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-size: clamp(2rem, 4vw, 3rem); // responsive
+  line-height: 1.2;
 }
 
 .titulosoluciones {
@@ -43,8 +50,13 @@ header {
 }
 
 .tituloportafolio {
-  color: v.$color-tituloportafolio;
-  font-family: v.$fuente;
+  color: v.$color-tituloportafolio !important ;
+  font-family: v.$fuente !important;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-size: clamp(2rem, 4vw, 3rem); // responsive
+  line-height: 1.2;
 }
 
 .titulocontactanos {
@@ -52,76 +64,84 @@ header {
   font-family: v.$fuente;
 }
 
-nav {
-  ul.navegacion {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
+.navbar {
+    background-color:aliceblue !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 1rem;
 
-    li.navegacion__item {
+    /* Logo */
+    .navbar-brand {
+      flex:auto;
       display: flex;
-      gap: 15px;
+      align-items:flex-start;
 
-      a {
-        display: inline-block;
-        color: #2E3434;
-        border: 1px solid v.$colorPrincipal;
-        border-radius: 5px;
-        padding: 8px 12px;
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
-
-        &:hover {
-          background-color: v.$colorPrincipal;
-          color: white;
-        }
-
-        &.navegacion__item--selected {
-          background-color: v.$colorPrincipal;
-          color: white;
-        }
+      img {
+        height: 150px !important;
+        width: auto;
       }
+    }
+
+    /*.tituloindex {
+      margin-left: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: v.$colorPrincipal;
+    }*/
+  
+
+
+  .nav-link {
+    color: v.$color-link !important;
+    border: 1px solid v.$colorPrincipal;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: v.$colorPrincipal;
+      color: white !important;
+    }
+
+    &.active,
+    &.navegacion__item--selected {
+      background-color: v.$colorPrincipal;
+      color: white !important;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(46,52,52,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  
+  @include v.mobile {
+  .navbar {
+    flex-direction: column; // Logo, título y menú apilados
+    align-items: flex-start; // 👉 alinear a la izquierda (cambia a flex-end para derecha)
+
+    .navbar-collapse {
+      justify-content: flex-start !important; // 👉 menú alineado a la izquierda
+      width: 100%;
+    }
+
+    .nav-link {
+      text-align: left; // 👉 enlaces alineados a la izquierda
+      width: 100%;
     }
   }
 }
 
-// 📱 Versión móvil
-@include v.mobile {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul.navegacion {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-  }
-
-  nav li {
-    flex: 0 0 auto;
-    text-align: center;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 6px 10px;
-    white-space: nowrap;
-  }
-
-  .imglogo {
-    height: 100px;
-    width: auto;
-  }
 }
 

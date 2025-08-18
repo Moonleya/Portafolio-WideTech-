@@ -1,34 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-co">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio WideTech - Soluciones de Software</title>
-    <link rel="shortcut icon" href="../assets/iconos.png" type="image/x-icon">
+    <title>Portafolio WideTech -Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../assets/iconos.png" type="image/x-icon">
 </head>
+
 <body>
         <!--Este es el cuerpo de mi primera pagina web Soluciones de Software  -->
    <header>
-<!-- Logo, titulo y Barra de navegación -->
- <a href="../index.html">
-    <img src="../assets/widetechlogostandard.png" alt="logo de widetech" title="Logo" class="imglogo">
- </a>
-      <h1 class="titulosoluciones absolute"> Soluciones</h1>
- <!-- Barra de Navegación -->
-  <!-- a significa enlace -->
-  <nav>
-    <ul class="navegacion">
-                 <li class="navegacion__item">
-              <a href="../index.html">Quienes Somos?</a>
-              <a href="./portafolio.html ">Portafolio</a>
-              <a href="./spacesiot.html">Spaces IoT </a>
-              <a href="./software.html" class="navegacion__item--selected" >Soluciones de Software</a>
-              <a href="./contactanos.html">Contáctanos</a>
+   <nav class="navbar navbar-expand-lg">
+    <!-- Logo -->
+    <a class="navbar-brand" href="../index.html">
+      <img src="../assets/widetechlogostandard.png" alt="Logo WideTech" class="imglogo">
+    </a>
+
+    <!-- Título centrado -->
+    <h1 class="titulosoluciones"> Software </h1>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Quiénes Somos?</a>
         </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link active" href="./portafolio.html">Portafolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./spacesiot.html">Spaces IoT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./software.html">Soluciones de Software</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contactanos.html">Contáctanos</a>
+        </li>
+      </ul>
+    </div>
   </nav>
-   </header> 
+</header> 
 
 <main>
       <section>
@@ -79,7 +99,8 @@
 
 </main>
 
-   <footer><h2 class="titulosoluciones">Derechos Reservados</h2>
+   <footer>
+    <h2 class="titulosoluciones">Derechos Reservados</h2>
      <h2 class="titulosoluciones">Creado por Leidy Achury  </h2>
      <nav>
            <a href="https://www.facebook.com/Widetech.co/?locale=es_LA" target="_blank">
@@ -100,6 +121,8 @@
         </nav>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     
 </body>
 </html>

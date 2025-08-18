@@ -16,8 +16,12 @@ main {
 }
 
 .inline {
-  display: block;
-  text-align: justify;
+  max-width: 1200px;        // limita el ancho del texto (ajústalo según prefieras)
+  margin: 20px auto;       // centra el bloque y le da espacio arriba/abajo
+  padding: 0 20px;         // aire a los lados
+  text-align: justify;     // mantiene justificado
+  line-height: 1.6;        // mejora la lectura
+  font-size: 1.1rem;       // un poco más grande para legibilidad
 }
 
 .contenedor {

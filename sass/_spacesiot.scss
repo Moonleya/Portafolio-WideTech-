@@ -6,13 +6,13 @@ main{
     padding: 20px;
 }
 .titulospaces {
-  color: #C4D600;
-  font-family:v.$fuente;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: left;
-  padding-left: 15px;
-  margin: 30px 0 20px;
+  color: v.$color-titulospaces !important;
+  font-family: v.$fuente !important;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-size: clamp(2rem, 4vw, 3rem); // responsive
+  line-height: 1.2;
 }
 
 .imgspacesiot {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -139,20 +138,15 @@ footer {
   }
 }
 header {
-  /* position: sticky;
-   top: 0px;*/ /* Para que se quede arriba y se mueve por mi scroll, pero no quiero eso */
+  width: 100%;
   padding: 10px;
-  background-color: aliceblue;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color: white;
 }
 
 .imglogo {
   height: 150px;
   width: 250px;
-  align-items: center;
+  align-items: flex-start;
   animation: aparecer 1.5s ease-in-out forwards;
 }
 
@@ -167,8 +161,12 @@ header {
   }
 }
 .tituloindex {
-  font-family: "Raleway";
+  font-family: "Raleway" !important;
   color: #13353B;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .titulospaces {
@@ -191,59 +189,74 @@ header {
   font-family: "Raleway";
 }
 
-nav ul.navegacion {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  gap: 15px;
-  list-style: none;
-  padding: 0px;
+.navbar {
+  background-color: yellow !important;
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.5rem 1rem;
+  /* Logo */
+  /*.tituloindex {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: v.$colorPrincipal;
+  }*/
 }
-nav ul.navegacion li.navegacion__item {
+.navbar .navbar-brand {
+  flex: 1;
   display: flex;
-  gap: 15px;
+  align-items: center;
 }
-nav ul.navegacion li.navegacion__item a {
-  display: inline-block;
-  color: #2E3434;
+.navbar .navbar-brand img {
+  height: 70px !important;
+  width: auto;
+}
+.navbar .nav-link {
+  color: #2E3434 !important;
   border: 1px solid #13353B;
   border-radius: 5px;
   padding: 8px 12px;
-  text-decoration: none;
+  margin: 0 5px;
   transition: background-color 0.3s, color 0.3s;
 }
-nav ul.navegacion li.navegacion__item a:hover {
+.navbar .nav-link:hover {
   background-color: #13353B;
-  color: white;
+  color: white !important;
 }
-nav ul.navegacion li.navegacion__item a.navegacion__item--selected {
+.navbar .nav-link.active, .navbar .nav-link.navegacion__item--selected {
   background-color: #13353B;
-  color: white;
+  color: white !important;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(46,52,52,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 @media (max-width: 768px) {
-  nav header {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar header {
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  nav nav {
-    width: 100%;
+  .navbar .navbar-brand {
+    justify-content: center;
+    flex-direction: column;
   }
-  nav nav ul.navegacion {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
+  .navbar .navbar-brand .tituloindex {
+    margin: 5px 0 0;
   }
-  nav nav li {
-    flex: 0 0 auto; /* Mantiene el tamaño del botón */
-    text-align: center;
-  }
-  nav nav a {
-    font-size: 14px; /* Texto más pequeño para que quepa más contenido */
-    padding: 6px 10px;
-    white-space: nowrap;
+  .navbar .navbar-collapse {
+    justify-content: center;
   }
 }
 
@@ -295,6 +308,35 @@ main article {
   display: block;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  main section {
+    margin-bottom: 15px;
+  }
+  main article {
+    margin-bottom: 15px;
+  }
+  .contenedor {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+  .carousel-item img {
+    height: auto;
+    max-height: 250px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .imgplataforma {
+    padding: 5px;
+  }
+  .imgplataforma img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
